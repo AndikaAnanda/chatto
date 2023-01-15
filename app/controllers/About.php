@@ -1,7 +1,7 @@
 <?php
     class About extends Controller{
         public function index($nama = 'Faiz', $pekerjaan = 'Gamer', $umur = 19){
-            $data['nama'] = $nama;
+            $data['nama'] = $this->model('User_model')->getUser();
             $data['pekerjaan'] = $pekerjaan;
             $data['umur'] = $umur;
 

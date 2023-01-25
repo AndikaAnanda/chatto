@@ -32,5 +32,9 @@
           <a class="nav-link" href="<?= BASEURL ?>/about">About</a>
         </div>
       </div>
+      <div class="col-md-3 text-end">
+          <button type="button" class="btn btn-outline-primary me-2">Login</button>
+          <button type="button" class="btn btn-primary">Sign-up</button>
+        </div>
     </div>
   </nav>

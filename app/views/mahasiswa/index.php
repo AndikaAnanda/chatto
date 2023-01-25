@@ -47,11 +47,22 @@
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" name="email">
           </div>
+
+          <div class="form-group">
+            <label for="jurusan">Jurusan</label>
+            <select class="form-control" name="jurusan" id="jurusan">
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Teknik Mesin">Teknik Mesin</option>
+              <option value="Teknik Elektro">Teknik Elektro</option>
+            </select>
+
+          </div>
       </div>
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Tambah Data</button>
+        <button type="submit" class="btn btn-primary">Tambah Data</button>
         </form>
       </div>
     </div>

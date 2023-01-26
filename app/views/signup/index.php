@@ -1,6 +1,6 @@
 <div class="container">
     <main class="form-signin w-100 m-auto">
-        <form>
+        <form action="<?= BASEURL; ?>/signup/register" method="post">
             <a href="<?= BASEURL ?>">
                 <img class="mb-2 mx-auto d-block" src="<?= BASEURL ?>/img/chatto-logo.png" width="60" height="60" alt="">
             </a>
@@ -8,15 +8,15 @@
             <h1 class="h3 mb-3 fw-normal text-center">Create account</h1>
 
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Username" autocomplete="off">
+                <input name="nama" type="text" class="form-control" id="floatingInput" placeholder="Username" autocomplete="off">
                 <label for="floatingInput">Username</label>
             </div>
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Your Email" autocomplete="off">
+                <input name="email" type="email" class="form-control" id="floatingInput" placeholder="Your Email" autocomplete="off">
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="off">
+                <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="off">
                 <label for="floatingPassword">Password</label>
             </div>
 

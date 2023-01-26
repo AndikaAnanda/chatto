@@ -1,3 +1,5 @@
-<script src="<?= BASEURL; ?>/dist/output.css"></script>
-</body>
+        </div>
+    <script src="<?= BASEURL; ?>/js/header.js"></script>
+    </body>
+
 </html>

@@ -1,23 +1,23 @@
-<div class="container">
-    <main class="form-signin w-100 m-auto">
-        <form action="<?= BASEURL; ?>/signup/register" method="post">
-            <a href="<?= BASEURL ?>">
+<div class="flex items-center justify-center min-h-screen w-full m-auto p-10">
+    <main class="form-signin bg-gray p-5 rounded-md drop-shadow-md">
+        <form action="<?= BASEURL; ?>/signup/register" class="flex flex-col gap-3 w-100" method="post">
+            <div>
                 <img class="mb-2 mx-auto d-block" src="<?= BASEURL ?>/img/chatto-logo.png" width="60" height="60" alt="">
-            </a>
+            </div>
 
-            <h1 class="h3 mb-3 fw-normal text-center">Create account</h1>
+            <h1 class="font-semibold mb-3 fw-normal text-xl text-center">Create account</h1>
 
             <div class="form-floating">
-                <input name="nama" type="text" class="form-control" id="floatingInput" placeholder="Username" autocomplete="off">
-                <label for="floatingInput">Username</label>
+                <label for="floatingInput" class="block">Username</label>
+                <input name="nama" type="text" class="form-control w-80 h-7 rounded-md p-5 max-w-screen" id="floatingInput" required placeholder="username" autocomplete="off">
             </div>
             <div class="form-floating">
-                <input name="email" type="email" class="form-control" id="floatingInput" placeholder="Your Email" autocomplete="off">
-                <label for="floatingInput">Email address</label>
+                <label for="floatingInput" class="block">Email address</label>
+                <input name="email" type="email" class="form-control w-80 h-7 rounded-md p-5 max-w-screen" id="floatingInput" required placeholder="username@mail.com" autocomplete="off">
             </div>
             <div class="form-floating">
-                <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="off">
-                <label for="floatingPassword">Password</label>
+                <label for="floatingPassword" class="block">Password</label>
+                <input name="password" type="password" class="form-control w-80 h-7 rounded-md p-5 max-w-screen" id="floatingPassword" required placeholder="Password" autocomplete="off">
             </div>
 
             <div class="checkbox mb-3">
@@ -25,7 +25,7 @@
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <button class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400" type="submit">Sign up</button>
         </form>
     </main>
 </div>

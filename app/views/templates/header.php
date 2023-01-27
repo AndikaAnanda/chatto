@@ -49,7 +49,7 @@
                     </div>
                     <div class="hidden lg:flex gap-3 lg:min-w-0 lg:flex-1 lg:justify-end">
                         <a href="#" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log in</a>
-                        <a href="#" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400">Sign up</a>
+                        <a href="<?= BASEURL ?>/signup" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400">Sign up</a>
                     </div>
                 </nav>
                 <!-- Mobile menu, show/hide based on menu open state. -->
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="py-6">
                                     <a href="#" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log in</a>
-                                    <a href="#" class="-mx-3 block rounded-lg py-2.5 px-3 text-slate-100 font-semibold leading-6 hover:bg-orange-500 bg-orange-400 my-3">Sign up</a>
+                                    <a href="<?= BASEURL ?>/signup" class="-mx-3 block rounded-lg py-2.5 px-3 text-slate-100 font-semibold leading-6 hover:bg-orange-500 bg-orange-400 my-3">Sign up</a>
                                 </div>
                             </div>
                         </div>
@@ -92,3 +92,4 @@
                 </div>
             </div>
         </div>
+    

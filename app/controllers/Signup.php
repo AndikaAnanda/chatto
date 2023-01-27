@@ -17,10 +17,10 @@
 
         public function register(){
             if($this->model('User_model')->createAccount($_POST) > 0 ){
-                header('Location: ' . BASEURL . '/mahasiswa');
+                header('Location: ' . BASEURL . '/');
                 exit;
             } else {
-                header('Location: ' . BASEURL . '/mahasiswa');
+                header('Location: ' . BASEURL . '/');
                 exit;
             }
         }

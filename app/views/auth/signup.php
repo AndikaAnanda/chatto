@@ -9,15 +9,15 @@
 
             <div class="form-floating">
                 <label for="floatingInput" class="block">Username</label>
-                <input name="nama" type="text" class="form-control w-80 h-7 rounded-md p-5 max-w-screen" id="floatingInput" required placeholder="username" autocomplete="off">
+                <input name="nama" type="text" class="form-control focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 w-80 h-7 rounded-md p-5 max-w-screen" id="floatingInput" required placeholder="username" autocomplete="off">
             </div>
             <div class="form-floating">
                 <label for="floatingInput" class="block">Email address</label>
-                <input name="email" type="email" class="form-control w-80 h-7 rounded-md p-5 max-w-screen" id="floatingInput" required placeholder="username@mail.com" autocomplete="off">
+                <input name="email" type="email" class="form-control focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 w-80 h-7 rounded-md p-5 max-w-screen" id="floatingInput" required placeholder="username@mail.com" autocomplete="off">
             </div>
             <div class="form-floating">
                 <label for="floatingPassword" class="block">Password</label>
-                <input name="password" type="password" class="form-control w-80 h-7 rounded-md p-5 max-w-screen" id="floatingPassword" required placeholder="Password" autocomplete="off">
+                <input name="password" type="password" class="form-control focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 w-80 h-7 rounded-md p-5 max-w-screen" id="floatingPassword" required placeholder="Password" autocomplete="off">
             </div>
 
             <div class="checkbox mb-3">
@@ -25,7 +25,7 @@
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
-            <button class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400" type="submit">Sign up</button>
+            <button class="inline-block rounded-lg px-3 py-2 mt-5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400" type="submit">Sign up</button>
         </form>
     </main>
 </div>

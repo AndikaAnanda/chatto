@@ -9,14 +9,14 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-class Signup extends Controller
+class Auth extends Controller
 {
     public function index()
     {
 
         $data['judul'] = 'Sign-Up';
         $this->view('templates/auth-header', $data);
-        $this->view('signup/index', $data);
+        $this->view('auth/signup', $data);
         $this->view('templates/footer');
     }
     public function login()
@@ -24,7 +24,7 @@ class Signup extends Controller
 
         $data['judul'] = 'Sign-In';
         $this->view('templates/header', $data);
-        $this->view('signup/login', $data);
+        $this->view('auth/login', $data);
         $this->view('templates/footer');
     }
 
@@ -61,11 +61,11 @@ class Signup extends Controller
 
         if ($this->model('User_model')->createAccount($_POST) > 0) {
             Flasher::setFlash('berhasil', 'didaftarkan', 'success');
-            header('Location: ' . BASEURL . '/signup/login');
+            header('Location: ' . BASEURL . '/auth/login');
             exit;
         } else {
             Flasher::setFlash('gagal', 'didaftarkan', 'danger');
-            header('Location: ' . BASEURL . '/signup');
+            header('Location: ' . BASEURL . '/auth/signup');
             exit;
         }
     }

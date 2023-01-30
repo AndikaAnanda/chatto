@@ -3,6 +3,7 @@ class User_model
 {
     private $table = 'users';
     private $db;
+    private $pass;
 
     public function __construct(){
         $this->db = new Database;
@@ -24,5 +25,10 @@ class User_model
 
         $this->db->execute();
         return $this->db->rowCount();
+    }
+
+    public function verifyPass($username, $email){
+        $pass = $this->pass;
+        $sql = "SELECT * FROM users WHERE username = ? OR email = ?;";
     }
 }

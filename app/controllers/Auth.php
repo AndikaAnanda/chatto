@@ -69,4 +69,23 @@ class Auth extends Controller
             exit;
         }
     }
+
+    //Register Logic
+    function invalidUid($username){
+		if (!preg_match("/^[a-zA-Z0-9]*$/", $username)){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+    function invalidEmail($email){
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 }

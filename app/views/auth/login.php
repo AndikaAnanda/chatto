@@ -1,10 +1,7 @@
-<div class="row">
+<div class="flex flex-col items-center justify-center min-h-screen w-full m-auto p-10">
     <div class="col-lg-6">
         <?php Flasher::flashReg(); ?>
     </div>
-
-</div>
-<div class="flex items-center justify-center min-h-screen w-full m-auto p-10">
     <main class="form-signin bg-gray p-5 rounded-md drop-shadow-md">
         <form action="<?= BASEURL; ?>/auth/signup/" class="flex flex-col gap-3 w-100" method="post">
             <div>

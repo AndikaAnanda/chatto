@@ -15,7 +15,7 @@ class Auth extends Controller
     {
 
         $data['judul'] = 'Sign-Up';
-        $this->view('templates/auth-header', $data);
+        $this->view('templates/header', $data);
         $this->view('auth/signup', $data);
         $this->view('templates/footer');
     }

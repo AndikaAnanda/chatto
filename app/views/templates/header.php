@@ -11,6 +11,8 @@
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- <script src="<?= BASEURL; ?>/js/header.js"></script> -->
     <link rel="stylesheet" href="<?= BASEURL; ?>/dist/output.css">
+    <!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"> -->
+<!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"> -->
 </head>
 
 <body>
@@ -28,7 +30,7 @@
                     <div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                         <a href="<?= BASEURL ?>" class="-m-1.5 p-1.5 flex gap-2 items-center group">
                             <img class="h-8 group-hover:animate-bounce" src="<?= BASEURL ?>/img/chatto-logo.png" alt="">
-                            <span class="text-xl font-bold text-gray-900">Chatto</span>
+                            <span class="text-xl font-bold ">Chatto</span>
                         </a>
                     </div>
                     <div class="flex lg:hidden">
@@ -41,14 +43,14 @@
                         </button>
                     </div>
                     <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
-                        <a href="<?= BASEURL ?>" class="font-semibold text-gray-900 hover:text-orange-400">Home</a>
+                        <a href="<?= BASEURL ?>" class="font-semibold hover:text-orange-400">Home</a>
 
-                        <a href="<?= BASEURL ?>/mahasiswa" class="font-semibold text-gray-900 hover:text-orange-400">Mahasiswa</a>
+                        <a href="<?= BASEURL ?>/mahasiswa" class="font-semibold hover:text-orange-400">Mahasiswa</a>
 
-                        <a href="<?= BASEURL ?>/about" class="font-semibold text-gray-900 hover:text-orange-400">About</a>
+                        <a href="<?= BASEURL ?>/about" class="font-semibold hover:text-orange-400">About</a>
                     </div>
                     <div class="hidden lg:flex gap-3 lg:min-w-0 lg:flex-1 lg:justify-end">
-                        <a href="<?= BASEURL ?>/auth/login" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log in</a>
+                        <a href="<?= BASEURL ?>/auth/login" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log in</a>
                         <a href="<?= BASEURL ?>/auth/signup" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400">Sign up</a>
                     </div>
                 </nav>
@@ -59,11 +61,11 @@
                             <div class="flex">
                                 <a href="<?= BASEURL ?>" class="-m-1.5 p-1.5 flex gap-2 items-center">
                                     <img class="h-8" src="<?= BASEURL ?>/img/chatto-logo.png" alt="">
-                                    <span class="text-xl font-bold text-gray-900">Chatto</span>
+                                    <span class="text-xl font-bold">Chatto</span>
                                 </a>
                             </div>
                             <div class="flex">
-                                <button type="button" id="close-menu-btn" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                                <button type="button" id="close-menu-btn" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
                                     <span class="sr-only">Close menu</span>
                                     <!-- Heroicon name: outline/x-mark -->
                                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -75,15 +77,15 @@
                         <div class="mt-6 flow-root">
                             <div class="-my-6 divide-y divide-gray-500/10">
                                 <div class="space-y-2 py-6">
-                                    <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Home</a>
+                                    <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7  hover:bg-gray-400/10">Home</a>
 
-                                    <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Mahasiswa</a>
+                                    <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7  hover:bg-gray-400/10">Mahasiswa</a>
 
-                                    <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">About</a>
+                                    <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7  hover:bg-gray-400/10">About</a>
 
                                 </div>
                                 <div class="py-6">
-                                    <a href="#" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log in</a>
+                                    <a href="#" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6  hover:bg-gray-400/10">Log in</a>
                                     <a href="<?= BASEURL ?>/auth/signup" class="-mx-3 block rounded-lg py-2.5 px-3 text-slate-100 font-semibold leading-6 hover:bg-orange-500 bg-orange-400 my-3">Sign up</a>
                                 </div>
                             </div>

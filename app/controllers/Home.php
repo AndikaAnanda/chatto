@@ -5,7 +5,7 @@
             $data['judul'] = 'Chatto';
             
             $this->view('templates/header', $data);
-            $this->view('auth/login',$data);
+            $this->view('about/index',$data);
             $this->view('templates/footer');
         }
     }

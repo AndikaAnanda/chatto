@@ -1,4 +1,4 @@
-<div class="flex flex-col items-center justify-center min-h-screen w-full m-auto p-10">
+<div id="main-container" class="flex flex-col items-center justify-center min-h-screen w-full m-auto p-10">
     <div class="col-lg-6">
         <?php Flasher::flashReg(); ?>
     </div>

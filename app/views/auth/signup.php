@@ -1,4 +1,7 @@
-<div id="main-container" class="flex items-center justify-center min-h-screen w-full m-auto p-10">
+<div id="main-container" class="flex flex-col items-center justify-center min-h-screen w-full m-auto p-10">
+    <div class="col-lg-6">
+        <?php Flasher::existFlash(); ?>
+    </div>
     <main class="form-signin bg-gray p-5 rounded-md drop-shadow-md">
         <form action="<?= BASEURL; ?>/auth/register" class="flex flex-col gap-3 w-100" method="post">
             <div>

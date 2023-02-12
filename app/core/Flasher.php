@@ -2,7 +2,7 @@
     class Flasher{
         public static function setFlash($pesan, $aksi, $tipe){
             $_SESSION['flash'] = [
-                'pesan' => $pesan, 'aksi' => $aksi,'tipe' => $tipe
+                'pesan' => $pesan, 'aksi' => $aksi,'tipe' => $tipe, 
             ];
         }
 
@@ -24,6 +24,17 @@
                 <h2>Pengguna <strong>'.$_SESSION['flash']['pesan'].'</strong> '.$_SESSION['flash']['aksi'].', link verifikasi telah dikirimkan ke email anda</h2>
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>';
+
+              unset($_SESSION['flash']);
+            }
+        }
+        public static function existFlash(){
+            if(isset($_SESSION['flash'])){
+                echo '<div class="bg-green-400 w-full rounded-md px-2 py-3">
+                
+                <h2>Pengguna <strong>'.$_SESSION['flash']['pesan'].'</strong> '.$_SESSION['flash']['aksi'].', '.$_SESSION['flash']['tipe'].'</h2>
+                
               </div>';
 
               unset($_SESSION['flash']);

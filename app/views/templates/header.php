@@ -12,7 +12,7 @@
     <!-- <script src="<?= BASEURL; ?>/js/header.js"></script> -->
     <link rel="stylesheet" href="<?= BASEURL; ?>/dist/output.css">
     <!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"> -->
-<!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"> -->
 </head>
 
 <body>
@@ -49,10 +49,25 @@
 
                         <a href="<?= BASEURL ?>/about" class="font-semibold hover:text-orange-400">About</a>
                     </div>
-                    <div class="hidden lg:flex gap-3 lg:min-w-0 lg:flex-1 lg:justify-end">
-                        <a href="<?= BASEURL ?>/auth/login" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log in</a>
-                        <a href="<?= BASEURL ?>/auth/signup" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400">Sign up</a>
-                    </div>
+                    <?php
+                        if(!isset($_SESSION['name'])){
+                            echo
+                            '
+                            <div class="hidden lg:flex gap-3 lg:min-w-0 lg:flex-1 lg:justify-end">
+                                <a href="<?= BASEURL ?>/auth/login" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log in</a>
+                                <a href="<?= BASEURL ?>/auth/signup" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400">Sign up</a>
+                            </div>
+                            ';
+                        }else{
+                            echo
+                            '
+                            <div class="hidden lg:flex gap-3 lg:min-w-0 lg:flex-1 lg:justify-end">
+                                <a href="<?= BASEURL ?>/auth/login" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">User</a>
+                            </div>
+                            ';
+                        }
+                    ?>
+
                 </nav>
                 <!-- Mobile menu, show/hide based on menu open state. -->
                 <div role="dialog" class="hidden" id="mobile-menu" aria-modal="true">
@@ -94,4 +109,3 @@
                 </div>
             </div>
         </div>
-    

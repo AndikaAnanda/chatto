@@ -35,6 +35,9 @@ class Auth extends Controller
             $nama = $_POST['nama'];
             $email = $_POST['email'];
 
+            $token = md5($email);
+            $url= "http://localhost/chatto/public/verify/index/$token";
+
             //Server settings
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                      //Set the SMTP server to send through
@@ -52,7 +55,7 @@ class Auth extends Controller
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Verify Email';
-            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+            $mail->Body    = 'Terima kasih sudah mendaftar, berikut ini adalah url untuk memverifikasi akun anda :<br>'.$url;
 
             $mail->send();
         } catch (Exception $e) {

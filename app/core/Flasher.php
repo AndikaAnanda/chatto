@@ -19,8 +19,10 @@
 
         public static function flashReg(){
             if(isset($_SESSION['flash'])){
-                echo '<div class="bg-green-400 w-full" role="alert">
-                Pengguna <strong>'.$_SESSION['flash']['pesan'].'</strong> '.$_SESSION['flash']['aksi'].'
+                echo '<div class="bg-green-400 w-full">
+                <div class="bg-green-400 px-2 py-1 rounded-md">
+                <h2>Pengguna <strong>'.$_SESSION['flash']['pesan'].'</strong> '.$_SESSION['flash']['aksi'].', link verifikasi telah dikirimkan ke email anda</h2>
+                </div>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
 

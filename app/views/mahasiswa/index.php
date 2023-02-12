@@ -1,4 +1,4 @@
-<div class="">
+<div class="bg-blue-200">
     <div class="row">
         <div class="col-6">
             <!-- Button trigger modal -->

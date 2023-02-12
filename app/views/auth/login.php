@@ -3,7 +3,7 @@
         <?php Flasher::flashReg(); ?>
     </div>
     <main class="form-signin bg-gray p-5 rounded-md drop-shadow-md">
-        <form action="<?= BASEURL; ?>/auth/signup/" class="flex flex-col gap-3 w-100" method="post">
+        <form action="<?= BASEURL; ?>/auth/signin" class="flex flex-col gap-3 w-100" method="post">
             <div>
                 <img class="mb-2 mx-auto d-block" src="<?= BASEURL ?>/img/chatto-logo.png" width="60" height="60" alt="">
             </div>

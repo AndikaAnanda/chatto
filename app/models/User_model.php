@@ -12,7 +12,7 @@ class User_model
     public function createAccount($data){
         $nama = $_POST['nama'];
         $email = $_POST['email'];
-        $token = md5($email);
+        $token = md5($email).md5($nama);
         
         $hashedpwd = password_hash($_POST['password'], PASSWORD_DEFAULT);
 

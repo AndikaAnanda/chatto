@@ -54,8 +54,8 @@
                             echo
                             '
                             <div class="hidden lg:flex gap-3 lg:min-w-0 lg:flex-1 lg:justify-end">
-                                <a href="<?= BASEURL ?>/auth/login" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log in</a>
-                                <a href="<?= BASEURL ?>/auth/signup" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400">Sign up</a>
+                                <a href="'. BASEURL .'/auth/login" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log in</a>
+                                <a href="'. BASEURL .'/auth/signup" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400">Sign up</a>
                             </div>
                             ';
                         }else{

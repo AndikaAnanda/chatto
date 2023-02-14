@@ -57,48 +57,39 @@ const sendMessage = () => {
     if (inputMessage.value !== "") {
         const mainContainer = document.createElement("div");
         mainContainer.classList.add(
-            "col-start-6",
-            "col-end-13",
-            "p-3",
-            "rounded-lg"
+            "flex",
+            "justify-end",
+            "mb-2"
         );
         const container = document.createElement("div");
         container.classList.add(
-            "flex",
-            "items-center",
-            "justify-start",
-            "flex-row-reverse"
-        );
-        const avatar = document.createElement("div");
-        avatar.classList.add(
-            "flex",
-            "items-center",
-            "justify-center",
-            "h-10",
-            "w-10",
-            "rounded-full",
-            "bg-blue-300",
-            "flex-shrink-0"
-        );
-        avatar.innerHTML = "B";
-        const messageCon = document.createElement("div");
-        messageCon.classList.add(
-            "relative",
-            "mr-3",
-            "text-sm",
-            "bg-indigo-100",
+            "rounded",
             "py-2",
-            "px-4",
-            "shadow",
-            "rounded-xl"
+            "px-3",
+            "bg-green-200"
         );
-        const msgValue = document.createElement("div");
+        const message = document.createElement("p");
+        message.classList.add(
+            "text-sm",
+            "mt-1",
+        );
+        message.innerHTML = inputMessage.value;
+        const time = document.createElement("p");
+        time.classList.add(
+            "text-right",
+            "text-xs",
+            "text-gray-500",
+            "mt-1"
+        );
+
+        const day = new Date();
+        let hour = day.getHours();
+        let minutes = day.getMinutes()
+
+        time.innerText = hour +":"+ minutes
     
-        msgValue.innerHTML = inputMessage.value;
-    
-        messageCon.appendChild(msgValue);
-        container.appendChild(avatar);
-        container.appendChild(messageCon);
+        container.appendChild(message);
+        container.appendChild(time);
         mainContainer.appendChild(container);
         msgsContainer.appendChild(mainContainer);
 

@@ -79,7 +79,7 @@
                                         Jam berapa otw?
                                     </p>
                                     <p class="text-right text-xs text-gray-500 mt-1">
-                                        12:45
+                                        00:45
                                     </p>
                                 </div>
                             </div>
@@ -90,10 +90,10 @@
                                         Jayabaya
                                     </p>
                                     <p class="text-sm mt-1">
-                                        Set 12 tapi
+                                        Set 2 tapi
                                     </p>
                                     <p class="text-right text-xs text-gray-500 mt-1">
-                                        12:45
+                                        00:45
                                     </p>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
                                         Hah.
                                     </p>
                                     <p class="text-right text-xs text-gray-500 mt-1">
-                                        12:45
+                                        00:45
                                     </p>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@
                                         Tapi jam set 3 subuh
                                     </p>
                                     <p class="text-right text-xs text-gray-500 mt-1">
-                                        12:45
+                                        00:46
                                     </p>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@
                                         Okeh, eksekusi
                                     </p>
                                     <p class="text-right text-xs text-gray-500 mt-1">
-                                        12:45
+                                        01:00
                                     </p>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@
             <div class="flex flex-col mt-8">
                 <div class="flex flex-row items-center justify-between text-xs">
                     <span class="font-bold">Online</span>
-                    <span class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full">4</span>
+                    <span class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full">5</span>
                 </div>
                 <div class="flex flex-col space-y-1 mt-4 -mx-2 h-70 overflow-y-auto">
                     <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">
@@ -186,9 +186,6 @@
                             B
                         </div>
                         <div class="ml-2 text-sm font-semibold">Balaputeradewa</div>
-                        <div class="flex items-center justify-center ml-auto text-xs text-white bg-red-500 h-4 w-4 rounded leading-none">
-                            2
-                        </div>
                     </button>
                     <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">
                         <div class="flex items-center justify-center h-8 w-8 bg-orange-200 rounded-full">
@@ -211,7 +208,7 @@
                 </div>
                 <div class="flex flex-row items-center justify-between text-xs mt-6">
                     <span class="font-bold">Archived</span>
-                    <span class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full">7</span>
+                    <span class="flex items-center justify-center bg-gray-300 h-4 w-4 rounded-full">1</span>
                 </div>
                 <div class="flex flex-col space-y-1 mt-4 -mx-2">
                     <button class="flex flex-row items-center hover:bg-gray-100 rounded-xl p-2">

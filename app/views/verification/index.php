@@ -3,7 +3,7 @@
     if(isset($data['token'])){
         echo '
         <div class="bg-green-400 py-1 px-2">
-            Your account is now activated ! <a class="text-red-500" href="<?= BASEURL ?>/auth/login">Click here</a> to redirect
+            Your account is now activated ! <a class="text-red-500" href="http://localhost/chatto/public/auth/login">Click here</a> to redirect
         </div>
         ';
         $this->model('User_model')->verifyToken($data['token']);

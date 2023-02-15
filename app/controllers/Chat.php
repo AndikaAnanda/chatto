@@ -1,11 +1,10 @@
 <?php
-    class Home extends Controller{
+    class Chat extends Controller{
         public function index(){
-
-            $data['judul'] = 'Chatto';
             
+            $data['judul'] = 'Chatroom';
             $this->view('templates/header', $data);
-            $this->view('home/index',$data);
+            $this->view('chat/index', $data);
             $this->view('templates/footer');
         }
     }

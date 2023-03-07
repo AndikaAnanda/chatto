@@ -22,12 +22,6 @@
                 <label for="floatingPassword" class="block">Password</label>
                 <input name="password" type="password" class="form-control focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 w-80 h-7 rounded-md p-5 max-w-screen" id="floatingPassword" required placeholder="Password" autocomplete="off">
             </div>
-
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-            </div>
             <button class="inline-block rounded-lg px-3 py-2 mt-5 text-sm font-semibold leading-6 text-slate-100 shadow-sm hover:bg-orange-500 bg-orange-400" type="submit">Sign up</button>
         </form>
     </main>

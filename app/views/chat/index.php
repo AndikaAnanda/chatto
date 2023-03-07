@@ -4,135 +4,20 @@
             <div class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-200 h-full p-4">
                 <div class="flex flex-col h-full overflow-x-auto mb-4">
                     <div class="flex flex-col h-full">
+                        <!---- Container Chat ---->
                         <div id="messages-container" class="flex-1 py-2 px-3 overflow-auto">
 
-                            <div class="flex justify-center mb-2">
-                                <div class="rounded py-2 px-4 bg-blue-200">
-                                    <p class="text-sm uppercase">
-                                        February 12, 2023
-                                    </p>
-                                </div>
-                            </div>
+                            <ul class="">
+                                <?php foreach ($data['chat'] as $chat) : ?>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="">
+                                            <?= $chat['chat_sender']; ?>
+                                        </a>
+                                        <?= ": " . $chat['chat_message']; ?>
 
-                            <div class="flex justify-center mb-4">
-                                <div class="rounded py-2 px-4 bg-yellow-100">
-                                    <p class="text-xs">
-                                        Messages to this chat and calls are now secured with end-to-end encryption. Tap for more info.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex mb-2">
-                                <div class="rounded py-2 px-3 bg-white">
-                                    <p class="text-sm text-teal-400">
-                                        Ken Arok
-                                    </p>
-                                    <p class="text-sm mt-1">
-                                        Ges
-                                    </p>
-                                    <p class="text-right text-xs text-gray-500 mt-1">
-                                        12:45
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex mb-2">
-                                <div class="rounded py-2 px-3 bg-white">
-                                    <p class="text-sm text-purple-400">
-                                        Balaputeradewa
-                                    </p>
-                                    <p class="text-sm mt-1">
-                                        Oi
-                                    </p>
-                                    <p class="text-right text-xs text-gray-500 mt-1">
-                                        12:45
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex mb-2">
-                                <div class="rounded py-2 px-3 bg-white">
-                                    <p class="text-sm text-orange-400">
-                                        Jayawardhana
-                                    </p>
-                                    <p class="text-sm mt-1">
-                                        Apa?
-                                    </p>
-                                    <p class="text-right text-xs text-gray-500 mt-1">
-                                        12:45
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex justify-center mb-2">
-                                <div class="rounded py-2 px-4 bg-blue-200">
-                                    <p class="text-sm uppercase">
-                                        Today
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex mb-2">
-                                <div class="rounded py-2 px-3 bg-white">
-                                    <p class="text-sm text-orange-400">
-                                        Tunggadewi
-                                    </p>
-                                    <p class="text-sm mt-1">
-                                        Jam berapa otw?
-                                    </p>
-                                    <p class="text-right text-xs text-gray-500 mt-1">
-                                        00:45
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex mb-2">
-                                <div class="rounded py-2 px-3 bg-white">
-                                    <p class="text-sm text-teal-400">
-                                        Jayabaya
-                                    </p>
-                                    <p class="text-sm mt-1">
-                                        Set 2 tapi
-                                    </p>
-                                    <p class="text-right text-xs text-gray-500 mt-1">
-                                        00:45
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-end mb-2">
-                                <div class="rounded py-2 px-3 bg-green-200">
-                                    <p class="text-sm mt-1">
-                                        Hah.
-                                    </p>
-                                    <p class="text-right text-xs text-gray-500 mt-1">
-                                        00:45
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-end mb-2">
-                                <div class="rounded py-2 px-3 bg-green-200">
-                                    <p class="text-sm mt-1">
-                                        Tapi jam set 3 subuh
-                                    </p>
-                                    <p class="text-right text-xs text-gray-500 mt-1">
-                                        00:46
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex mb-2">
-                                <div class="rounded py-2 px-3 bg-white">
-                                    <p class="text-sm text-purple-400">
-                                        Aidiq
-                                    </p>
-                                    <p class="text-sm mt-1">
-                                        Okeh, eksekusi
-                                    </p>
-                                    <p class="text-right text-xs text-gray-500 mt-1">
-                                        01:00
-                                    </p>
-                                </div>
-                            </div>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
 
                         </div>
                     </div>
@@ -147,24 +32,17 @@
                     </div>
                     <div class="flex-grow ml-4">
                         <div class="relative w-full">
-                            <input id="message-value" type="text" autofocus class="flex w-full border rounded-xl focus:outline-none focus:border-indigo-300 pl-4 h-10" />
-                            <button class="absolute flex items-center justify-center h-full w-12 right-0 top-0 text-gray-400 hover:text-gray-600">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </button>
+                            <form action="<?= BASEURL; ?>/chat/submitChat" method="post">
+                            <input type='hidden' name='chat_sender' id="chat_sender" value=<?= $_SESSION['name'] ?> />
+                                <input name="chat_message" id="chat_message" type="text" autofocus class="flex w-full border rounded-xl focus:outline-none focus:border-indigo-300 pl-4 h-10" />
+
+                                <button class="absolute flex items-center justify-center h-full right-0 top-0 bg-indigo-500 hover:bg-indigo-600 rounded-xl text-white px-6 py-1 flex-shrink-0">
+                                    <span>Send</span>
+                                </button>
+                            </form>
                         </div>
                     </div>
-                    <div class="ml-4">
-                        <button id="send-message" class="flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0">
-                            <span>Send</span>
-                            <span class="ml-2">
-                                <svg class="w-4 h-4 transform rotate-45 -mt-px" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
+
                 </div>
             </div>
         </div>

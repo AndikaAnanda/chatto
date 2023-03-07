@@ -97,5 +97,58 @@ class Auth extends Controller
         }
     }
 
+    // public function signin()
+    // {
+    //     $data['user'] = $this->model('User_model')->getUserByEmail($_POST);
+    //     if($data['user']['status'] == 1){
+    //         $_SESSION['name'] = $data['user']['name'];
+    //         $_SESSION['email'] = $data['user']['email'];
+    //         header(' Location: ' . BASEURL . '/chat' );
+    //         exit();
+    //     }else{
+    //         header('Location: ' . BASEURL . '/auth/signup');
+    //     }
+
+    // }
+    public function logout()
+    {
+        unset($_SESSION);
+        session_destroy();
+        session_write_close();
+        header('Location: ' . BASEURL . '');
+    }
+    public function signin()
+    {
+        $uidExist = $this->model('User_model')->emailExist($_POST);
+        $data['user'] = $this->model('User_model')->getUserByEmail($_POST);
+
+        if ($uidExist === false) {
+            header('Location: ' . BASEURL . '/auth/login/account-not-registered');
+            exit();
+        }
+
+        $pwdHashed = $uidExist['password'];
+        $checkPwd = password_verify($_POST['password'], $pwdHashed);
+        if($data['user']['status'] == 1){
+            if ($checkPwd === false) {
+
+                //salah pass
+                header('Location: ' . BASEURL . '/auth/login/wrong-credential');
+                exit();
+
+            } else if ($checkPwd === true && $data['user']['status'] == 1) {
+                $_SESSION['name'] = $data['user']['name'];
+                $_SESSION['email'] = $data['user']['email'];
+                header('Location: ' . BASEURL . '/chat');
+                exit();
+            }
+        }else{
+            //belum diverif
+            header('Location: ' . BASEURL . '/auth/login/account-not-verified');
+            exit();
+        }
+        
+    }
+
     // ================================ HELPER ==================================
 }

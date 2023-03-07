@@ -45,10 +45,16 @@
                     <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
                         <a href="<?= BASEURL ?>" class="font-semibold hover:text-orange-400">Home</a>
 
-                        <a href="<?= BASEURL ?>/mahasiswa" class="font-semibold hover:text-orange-400">Mahasiswa</a>
+                        <?php 
+                            if(isset($_SESSION['name'])){
+                                echo '<a href="' .BASEURL. '/chat" class="font-semibold hover:text-orange-400">Chatroom</a>';
+                            }
+                        ?>
+                        
 
                         <a href="<?= BASEURL ?>/about" class="font-semibold hover:text-orange-400">About</a>
                     </div>
+
                     <?php
                         if(!isset($_SESSION['name'])){
                             echo
@@ -62,7 +68,15 @@
                             echo
                             '
                             <div class="hidden lg:flex gap-3 lg:min-w-0 lg:flex-1 lg:justify-end">
-                                <a href="<?= BASEURL ?>/auth/login" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">User</a>
+                                <a href="'. BASEURL .'/auth/login" class="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                <svg class="w-6 h-6 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                                '. $_SESSION['name'] .'
+                                
+                                </a>
+                                
+                                <a href="'. BASEURL .'/auth/logout" class="flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                Log out
+                                </a>
                             </div>
                             ';
                         }

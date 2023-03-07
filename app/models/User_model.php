@@ -29,6 +29,18 @@ class User_model
         return $this->db->rowCount();
     }
 
+    public function getUserByEmail(){
+        $email = $_POST['email'];
+        $matchPass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $verifPass = password_verify($_POST['password'], $matchPass);
+        
+        $this->db->query('SELECT * FROM '. $this->table .' WHERE email=:email');
+        $this->db->bind('email', $email);
+        $this->db->execute();
+        
+        return $this->db->single();
+    }
+
     // =============================== END MAIN LOGIC =======================================
 
     public function verifyToken($token){
@@ -54,14 +66,17 @@ class User_model
 			return true;
 		}
 	}
-    public function emailExist($email){
+    //UID EXIST//
+    public function emailExist(){
+        $email = $_POST['email'];
         $this->db->query('SELECT * FROM '. $this->table .' WHERE email = :email');
         $this->db->bind('email', $email);
-        $user = $this->db->single();
-        if($user != null){
-            return true;
+        if($this->db->single() != null){
+            return $this->db->single();
         }else{
             return false;
         }
-    }
+	}
+
+    
 }

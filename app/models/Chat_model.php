@@ -9,7 +9,7 @@
         }
 
         public function getAllChat(){
-            $this->db->query('SELECT * FROM '. $this->table);
+            $this->db->query('SELECT * FROM '. $this->table .' ORDER BY chat_id DESC LIMIT 15');
             return $this->db->resultSet();
         }
 
